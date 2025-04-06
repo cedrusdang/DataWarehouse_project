@@ -1,0 +1,4 @@
+# Secrets
+.env
+postgressql_secretkeys.env
+# Local configuration files
