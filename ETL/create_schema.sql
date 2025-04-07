@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS fact_crash;
+DROP TABLE IF EXISTS fact_fatality;
 DROP TABLE IF EXISTS dim_crash_group;
 DROP TABLE IF EXISTS dim_fatality_demographic;
 DROP TABLE IF EXISTS dim_time;
@@ -35,9 +35,8 @@ CREATE TABLE dim_location (
   population INT
 );
 
-CREATE TABLE fact_crash (
+CREATE TABLE fact_fatality (
   crash_sk INT PRIMARY KEY,
-  crash_id INT NOT NULL,
   crashgroup_sk INT NOT NULL,
   fatality_demographics_sk INT NOT NULL,
   time_sk INT NOT NULL,
