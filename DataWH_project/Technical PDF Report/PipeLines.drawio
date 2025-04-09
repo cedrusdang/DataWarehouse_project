@@ -1,0 +1,58 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" version="26.2.4">
+  <diagram name="Page-1" id="F6bk8Vy6GNemx7nFyU1i">
+    <mxGraphModel dx="1044" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="TRM04VeAhYTsqduYJsFN-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="TRM04VeAhYTsqduYJsFN-4" target="TRM04VeAhYTsqduYJsFN-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TRM04VeAhYTsqduYJsFN-4" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="65" y="110" width="130" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="TRM04VeAhYTsqduYJsFN-1" value="Raw data" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="140" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="TRM04VeAhYTsqduYJsFN-2" value="Raw data" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="180" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="TRM04VeAhYTsqduYJsFN-3" value="Raw data" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="220" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="TRM04VeAhYTsqduYJsFN-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="TRM04VeAhYTsqduYJsFN-5" target="TRM04VeAhYTsqduYJsFN-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TRM04VeAhYTsqduYJsFN-5" value="ETL" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="175" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TRM04VeAhYTsqduYJsFN-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="TRM04VeAhYTsqduYJsFN-7" target="TRM04VeAhYTsqduYJsFN-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TRM04VeAhYTsqduYJsFN-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="TRM04VeAhYTsqduYJsFN-7" target="TRM04VeAhYTsqduYJsFN-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TRM04VeAhYTsqduYJsFN-7" value="PostgresSQL Server" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="175" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TRM04VeAhYTsqduYJsFN-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="TRM04VeAhYTsqduYJsFN-8" target="TRM04VeAhYTsqduYJsFN-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TRM04VeAhYTsqduYJsFN-8" value="Manual queries" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="240" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TRM04VeAhYTsqduYJsFN-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="TRM04VeAhYTsqduYJsFN-9" target="TRM04VeAhYTsqduYJsFN-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TRM04VeAhYTsqduYJsFN-9" value="Built-in software&lt;div&gt;queries&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="110" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TRM04VeAhYTsqduYJsFN-11" value="POWER BI" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="105" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TRM04VeAhYTsqduYJsFN-12" value="Data Mining" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="235" width="70" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
