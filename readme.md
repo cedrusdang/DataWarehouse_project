@@ -4,7 +4,7 @@
 
 **Unit:** Data Warehouse
 
-**Authors:** Cedrus Dang 
+**Authors:** Cedrus Dang  Bhavesh Agarwal
 
 **Date:** 07 April 2025
 
@@ -25,7 +25,8 @@ Changing in the create_schema.sql will change the schema that has been created i
 auto_insert can only be used after you active the flag in create_local_csv to True to create the csv files. 
 
 ## 2. Data analysis power BI file:
-
+It is automatically connected into the PostgrestSQL server, you can refesh the data after reconnect it with your server.
 ## 3. Data mining notebook:
-
+This is automatically connected with PostgresSQL server.
 ## 4. Technical Report:
+There are 1 main file of PDF for the report, and 1 for the powerBI visualization pdf. 
