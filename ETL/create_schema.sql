@@ -1,24 +1,43 @@
 DROP TABLE IF EXISTS fact_fatality;
-DROP TABLE IF EXISTS dim_crash_group;
-DROP TABLE IF EXISTS dim_fatality_demographic;
+DROP TABLE IF EXISTS dim_crash_type;
+DROP TABLE IF EXISTS dim_gender;
+DROP TABLE IF EXISTS dim_speed_limit;
+DROP TABLE IF EXISTS dim_age;
+DROP TABLE IF EXISTS dim_road_user;
+DROP TABLE IF EXISTS dim_road_type;
 DROP TABLE IF EXISTS dim_time;
 DROP TABLE IF EXISTS dim_location;
 
-CREATE TABLE dim_crash_group (
-  crashgroup_sk INT PRIMARY KEY,
+CREATE TABLE dim_crash_type (
+  crash_type_sk INT PRIMARY KEY,
   crash_type VARCHAR(10),
-  speed_limit VARCHAR(10),
-  road_type TEXT,
-  bus_involvement VARCHAR(10),
-  heavy_rigid_truck_involvement VARCHAR(10),
-  articulated_truck_involvement VARCHAR(10)
+  fatalities_by_crash INT
 );
 
-CREATE TABLE dim_fatality_demographic (
-  fatality_demographics_sk INT PRIMARY KEY,
-  road_user TEXT,
-  gender VARCHAR(10),
-  age_group VARCHAR(11) 
+CREATE TABLE dim_gender (
+  gender_sk INT PRIMARY KEY,
+  gender VARCHAR(10)
+);
+
+CREATE TABLE dim_speed_limit (
+  speed_limit_sk INT PRIMARY KEY,
+  speed_limit VARCHAR(10)
+);
+
+CREATE TABLE dim_age (
+  age_sk INT PRIMARY KEY,
+  age VARCHAR(10),
+  age_group VARCHAR(15)
+);
+
+CREATE TABLE dim_road_user (
+  road_user_sk INT PRIMARY KEY,
+  road_user TEXT
+);
+
+CREATE TABLE dim_road_type (
+  road_type_sk INT PRIMARY KEY,
+  road_type TEXT
 );
 
 CREATE TABLE dim_time (
@@ -31,18 +50,26 @@ CREATE TABLE dim_time (
 
 CREATE TABLE dim_location (
   state_id VARCHAR(10) PRIMARY KEY,
-  state_name TEXT NOT NULL,
-  population INT
+  population INT,  
+  state_name TEXT NOT NULL
 );
 
 CREATE TABLE fact_fatality (
-  crash_sk INT PRIMARY KEY,
-  crashgroup_sk INT NOT NULL,
-  fatality_demographics_sk INT NOT NULL,
+  fatality_sk INT PRIMARY KEY,
+  crash_type_sk INT NOT NULL,
+  gender_sk INT NOT NULL,
+  speed_limit_sk INT NOT NULL,
+  age_sk INT NOT NULL,
+  road_user_sk INT NOT NULL,
+  road_type_sk INT NOT NULL,
   time_sk INT NOT NULL,
   state_id VARCHAR(10) NOT NULL,
-  FOREIGN KEY (crashgroup_sk) REFERENCES dim_crash_group (crashgroup_sk) ON DELETE CASCADE ON UPDATE CASCADE,
-  FOREIGN KEY (fatality_demographics_sk) REFERENCES dim_fatality_demographic (fatality_demographics_sk) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (crash_type_sk) REFERENCES dim_crash_type (crash_type_sk) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (gender_sk) REFERENCES dim_gender (gender_sk) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (speed_limit_sk) REFERENCES dim_speed_limit (speed_limit_sk) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (age_sk) REFERENCES dim_age (age_sk) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (road_user_sk) REFERENCES dim_road_user (road_user_sk) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (road_type_sk) REFERENCES dim_road_type (road_type_sk) ON DELETE CASCADE ON UPDATE CASCADE,
   FOREIGN KEY (time_sk) REFERENCES dim_time (time_sk) ON DELETE CASCADE ON UPDATE CASCADE,
   FOREIGN KEY (state_id) REFERENCES dim_location (state_id) ON DELETE CASCADE ON UPDATE CASCADE
 );

@@ -1,12 +1,36 @@
--- Load dim_crash_group
-COPY dim_crash_group
-FROM 'raw_data/dim_crash_group.csv'
+-- Load dim_crash_type
+COPY dim_crash_type
+FROM 'raw_data/dim_crash_type.csv'
 DELIMITER ','
 CSV HEADER;
 
--- Load dim_fatality_demographic
-COPY dim_fatality_demographic
-FROM 'raw_data/dim_fatality_demographic.csv'
+-- Load dim_gender
+COPY dim_gender
+FROM 'raw_data/dim_gender.csv'
+DELIMITER ','
+CSV HEADER;
+
+-- Load dim_speed_limit
+COPY dim_speed_limit
+FROM 'raw_data/dim_speed_limit.csv'
+DELIMITER ','
+CSV HEADER;
+
+-- Load dim_age
+COPY dim_age
+FROM 'raw_data/dim_age.csv'
+DELIMITER ','
+CSV HEADER;
+
+-- Load dim_road_user
+COPY dim_road_user
+FROM 'raw_data/dim_road_user.csv'
+DELIMITER ','
+CSV HEADER;
+
+-- Load dim_road_type
+COPY dim_road_type
+FROM 'raw_data/dim_road_type.csv'
 DELIMITER ','
 CSV HEADER;
 
@@ -22,8 +46,8 @@ FROM 'raw_data/dim_location.csv'
 DELIMITER ','
 CSV HEADER;
 
--- Load fact_crash
-COPY fact_crash
-FROM 'raw_data/fact_crash.csv'
+-- Load fact_fatality
+COPY fact_fatality
+FROM 'raw_data/fact_fatality.csv'
 DELIMITER ','
 CSV HEADER;
