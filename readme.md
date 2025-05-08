@@ -10,6 +10,8 @@
 
 **Version:** 1.0
 
+Report file: [Full PDF Report]([./report.pdf](https://github.com/cedrusdang/DataWarehouse_project/blob/main/Technical%20PDF%20Report/Technical_Report_24190901_23933845.pdf))
+
 **🔐 Environment Setup**
 
 Install Python and the needed libraries, and change the secret keys in postgressql_secretkeys.env for PostgresSQL to sign in. 
